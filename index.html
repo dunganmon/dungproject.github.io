@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styless.css">
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project1</title>
+</head>
+<body>
+    <header>
+        <h1>📇 Danh Bạ Liên Hệ</h1>
+    </header>
+    <div class="container">
+       <div class="contacts-section">
+        <table>
+          <thead>
+           <tr>
+            <th>Họ và tên</th>
+            <th>Số điện thoại</th>
+            <th>Email</th>
+            <th>Địa chỉ</th>
+            <th>Thao tác</th>
+           </tr>
+          </thead>
+          <tbody id="contactsTableBody">
+          
+          </tbody>
+        </table>
+       </div>
+       <div class="add-contact-section">
+        <h2>Thêm liên hệ mới</h2>
+        <form id="addContactForm" method="post">
+          <div class="form-group"> 
+           <label for="name">Họ và tên:</label>
+           <input type="text" id="name" name="name" required>
+          </div> 
+          <div class="form-group"> 
+            <label for="tel">Số điện thoại:</label>
+            <input type="tel" id="tel" name="tel" required>
+           </div>
+           <div class="form-group"> 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+           </div>
+           <div class="form-group"> 
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" name="address">
+           </div>
+           <div class="form-group">
+             <input type="submit" value="Thêm liên hệ">
+           </div>
+        </form>
+    </div>
+    </div>
+    <footer>@2025 - Make by Dũng đẹp trai</footer>
+     <script src="script.js"></script>
+</body>
+</html>

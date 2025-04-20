@@ -1,0 +1,184 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background: linear-gradient(
+        120deg,
+        skyblue,
+        lightgreen,
+        mintcream,
+        lightpink,
+        lavender,
+        peachpuff,
+        gold,
+        plum,
+        deepskyblue
+      );
+    background-size: 300% 300%;
+    animation: bodyGradient 5s ease-in-out infinite;
+    padding: 20px;
+}
+  
+  @keyframes bodyGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+h1{
+    text-align: center; 
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #08415c;
+    text-shadow: 1 2 2 rgba(0, 0, 0, 0.1);
+}
+h2 {
+    color: #08415c;
+    margin-bottom: 15px;
+}
+.container{
+    display: flex; /*cho no nam ngang*/
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.contacts-section {
+    flex: 2; /*chiem 2 phan*/
+}
+.add-contact-section{
+   flex: 1;
+   background: linear-gradient(135deg, #ffe6f0, #e0f7fa, #fff7d6, #e1bee7);
+   padding: 15px;
+   border-radius: 12px;
+   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease;
+}
+
+.add-contact-section:hover {
+    transform: scale(1.02);
+  }
+table {
+   width: 100%;
+   border-collapse: collapse;
+   background: linear-gradient(135deg, #fdf0f0, #f0fff0, #f0f8ff);
+   border-radius: 12px;
+   overflow: hidden;
+   box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+th, td{
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /*solid là đường viền thường*/
+}
+th {
+    background-color: #ffb6b9;
+    color: #fff;
+    padding: 12px;
+    font-weight: bold;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+.edit-btn, .delete-btn{
+  padding: 6px 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-size: 14px;
+}
+.edit-btn {
+    background-color: #38b000;
+}
+
+.delete-btn {
+    background-color: #ff6b6b;
+}
+form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label{
+ display: block;
+ margin-bottom: 5px;
+ font-weight: bold; 
+ color: #2c3e50;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+input[type="submit"]{
+    background-color: #0077b6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        flex-direction: column;
+    }
+}
+.edit-btn, .delete-btn, input[type="submit"]{
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.edit-btn:hover {
+    background-color: #2d9600;
+    transform: scale(1.09);
+}
+
+.delete-btn:hover {
+    background-color: #ff4d4d;
+    transform: scale(1.09);
+}
+
+input[type="submit"]:hover {
+    background-color: #005f87;
+    transform: scale(1.09);
+}
+footer {
+    margin-top: 100px;
+    text-align: center;
+    color: #08415c;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+footer:hover {
+    color: #0077b6;
+    text-shadow: 0 0 8px rgba(0, 119, 182, 0.6);
+    transform: scale(1.03);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
